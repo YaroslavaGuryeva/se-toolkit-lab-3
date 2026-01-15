@@ -48,7 +48,7 @@ This and all other lab assignments will simulate real-life engineering practices
 ### Set up a fork
 
 1. Create a `GitHub` account.
-2. Fork this repo to your `GitHub` account.
+2. Fork this repo to your `GitHub` account and make it public.
 3. Continue your work in the forked repo.
 4. In the repo -> `Settings` -> `General` -> `Features`, enable `Issues`.
 5. <details> <summary> (Optional) Create a label for tasks (click to expand).</summary>
