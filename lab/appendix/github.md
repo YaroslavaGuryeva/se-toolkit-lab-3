@@ -31,6 +31,10 @@
     - [Open the PR editor using `Pull requests`](#open-the-pr-editor-using-pull-requests)
     - [Open the PR editor using the branch list](#open-the-pr-editor-using-the-branch-list)
   - [Finish creating a PR](#finish-creating-a-pr)
+- [Label](#label)
+  - [Create a label](#create-a-label)
+  - [Add a label to issues](#add-a-label-to-issues)
+  - [See all issues with a label](#see-all-issues-with-a-label)
 - [`GitHub flow`](#github-flow)
 - [`GitHub Projects`](#github-projects)
 
@@ -227,6 +231,35 @@ Create a PR to the `<repo-name>/<branch-name>`:
 5. Click `Create pull request`.
 
 <!-- TODO Click Markdown code block to copy -->
+
+## Label
+
+A [label](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) helps you filter and organize [issues](#issue).
+
+### Create a label
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Issues` -> `Labels`.
+3. Create a new label:
+   1. Click `New label`.
+   2. Name: `<label-name>`.
+   3. Click `Create label`.
+
+### Add a label to issues
+
+1. [Go to your fork](#go-to-your-fork).
+2. [Add](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) the `<label-name>` label to some of your issues.
+
+### See all issues with a label
+
+1. [Go to your fork](#go-to-your-fork).
+2. Go to `Issues`.
+3. If you don't see any `Open` issues, click `Closed`.
+4. Filter issues by the label:
+   1. Click `Labels`.
+   2. In the `Filter labels` input area, write `<label-name>`.
+   3. Click the suggested label.
+5. You should see all issues that have the `<label-name>` label.
 
 ## `GitHub flow`
 

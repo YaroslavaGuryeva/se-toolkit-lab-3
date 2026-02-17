@@ -38,9 +38,6 @@
   - [3. Customize the `Source Control`](#3-customize-the-source-control)
   - [4. Get familiar with `GitLens`](#4-get-familiar-with-gitlens)
   - [5. Create a label for tasks](#5-create-a-label-for-tasks)
-    - [Create the `task` label](#create-the-task-label)
-    - [Add the label to issues](#add-the-label-to-issues)
-    - [See all issues with the label](#see-all-issues-with-the-label)
   - [6. View `README.md` in `VS Code`](#6-view-readmemd-in-vs-code)
 
 ## Steps
@@ -399,7 +396,7 @@ Complete these steps:
 
 ### 5. Create a label for tasks
 
-[Labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels) help you filter and organize issues.
+[Labels](./appendix/github.md#label) help you filter and organize issues.
 
 With a `task` label, you can see in one view all issues created for lab tasks.
 
@@ -408,34 +405,9 @@ With a `task` label, you can see in one view all issues created for lab tasks.
 
 Complete these steps:
 
-1. [Create the `task` label](#create-the-task-label)
-2. [Add the label to issues](#add-the-label-to-issues)
-3. [See all issues with the label](#see-all-issues-with-the-label)
-
-#### Create the `task` label
-
-1. [Go to your fork](#33-go-to-your-fork).
-2. Go to `Issues` -> `Labels`.
-3. Create a new label:
-   1. Click `New label`.
-   2. Name: `task`.
-   3. Click `Create label`.
-
-#### Add the label to issues
-
-1. [Go to your fork](#33-go-to-your-fork).
-2. [Add](https://github.com/orgs/community/discussions/53473#discussioncomment-5697478) the `task` label to some of your issues.
-
-#### See all issues with the label
-
-1. [Go to your fork](#33-go-to-your-fork).
-2. Go to `Issues`.
-3. If you don't see any `Open` issues, click `Closed`.
-4. Filter issues by the label:
-   1. Click `Labels`.
-   2. In the `Filter labels` input area, write `task`.
-   3. Click the suggested label.
-5. You should see all issues that have the `task` label.
+1. [Create](./appendix/github.md#create-a-label) the `task` label.
+2. [Add the label to issues](./appendix/github.md#add-a-label-to-issues).
+3. [See all issues with the label](./appendix/github.md#see-all-issues-with-a-label).
 
 ### 6. View `README.md` in `VS Code`
 
