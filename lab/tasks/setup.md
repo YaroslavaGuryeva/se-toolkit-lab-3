@@ -225,12 +225,12 @@
 > [!NOTE]
 > The `.env.docker.secret` file contains environment variables for the `Docker` containers.
 >
-> It was added to [`.gitignore`](../.gitignore) because you may specify there
+> It was added to [`.gitignore`](../../.gitignore) because you may specify there
 > [secrets](../appendix/environments.md#secrets) such as the API key or the address of your VM.
 
 > [!TIP]
 > No edits are needed for local development.
-> The default values in [`.env.docker.example`](../.env.docker.example) work out of the box.
+> The default values in [`.env.docker.example`](../../.env.docker.example) work out of the box.
 
 #### 1.11.2. (NEW) Start the services
 
@@ -346,7 +346,7 @@ Complete these steps:
 With a `task` label, you can see in one view all issues created for lab tasks.
 
 > [!TIP]
-> If you create the `task` label before creating issues, your issues will have this label automatically as configured in the [issue form](../.github/ISSUE_TEMPLATE/01-task.yml).
+> If you create the `task` label before creating issues, your issues will have this label automatically as configured in the [issue form](../../.github/ISSUE_TEMPLATE/01-task.yml).
 
 Complete these steps:
 
@@ -356,9 +356,9 @@ Complete these steps:
 
 ### 2.6. View `Markdown` files in `VS Code`
 
-If you want to view `README.md` and other `Markdown` files in `VS Code` instead of on `GitHub`:
+If you want to view [`README.md`](../../README.md) and other `Markdown` files in `VS Code` instead of on `GitHub`:
 
 1. [Install recommended `VS Code` extensions](../appendix/vs-code.md#install-recommended-extensions).
 2. [Open the file](../appendix/vs-code.md#open-the-file):
-   [`README.md`](../README.md).
+   [`README.md`](../../README.md).
 3. [Open the `Markdown` preview](../appendix/vs-code.md#open-the-markdown-preview).
