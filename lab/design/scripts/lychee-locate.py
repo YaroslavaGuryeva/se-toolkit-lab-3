@@ -29,6 +29,19 @@ class _LycheeOutput(BaseModel):
     error_map: dict[str, list[_LinkError]] = {}
 
 
+def _display_url(url: str) -> str:
+    """Convert file:// URLs to relative paths; leave other URLs unchanged."""
+    if url.startswith("file://"):
+        path_part = re.sub(r"^file://", "", url)
+        file_path, _, fragment = path_part.partition("#")
+        try:
+            rel = Path(file_path).relative_to(Path.cwd())
+            return f"{rel}#{fragment}" if fragment else str(rel)
+        except ValueError:
+            pass
+    return url
+
+
 def find_location(filepath: str, url: str) -> tuple[int, int] | None:
     # lychee normalizes relative file links to absolute file:// URLs.
     # Reconstruct a searchable pattern from just the basename + fragment.
@@ -76,7 +89,7 @@ for filepath, errors in data.error_map.items():
         loc = find_location(filepath, error.url)
         location = f"{relpath}:{loc[0]}:{loc[1]}" if loc else str(relpath)
         print(
-            f"{_c('1', location)}: {_c('1;31', '[ERROR]')} {_c('36', error.url)}"
+            f"{_c('1', location)}: {_c('1;31', '[ERROR]')} {_c('36', _display_url(error.url))}"
         )
         print(f"  {_c('2', error.status.text)}")
 
