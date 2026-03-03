@@ -2,14 +2,14 @@
 
 from fastapi import APIRouter
 
-# from datetime import datetime
-#
-# from fastapi import Depends
-# from sqlmodel.ext.asyncio.session import AsyncSession
-#
-# from app.database import get_session
-# from app.db.learners import read_learners, create_learner
-# from app.models.learner import Learner, LearnerCreate
+from datetime import datetime
+
+from fastapi import Depends
+from sqlmodel.ext.asyncio.session import AsyncSession
+
+from app.database import get_session
+from app.db.learners import read_learners, create_learner
+from app.models.learner import Learner, LearnerCreate
 
 router = APIRouter()
 
@@ -18,19 +18,19 @@ router = APIRouter()
 # ===
 
 # UNCOMMENT AND FILL IN
-#
-# @router.<method>("/<resource_name>", response_model=list[<resource_schema>])
-# async def <function_name>(
-#     <query_param>: <type> = None,
-#     session: AsyncSession = Depends(get_session),
-# ):
-#     """<docstring>"""
-#     return await <db_read_function>(session, <query_param>)
-#
-# Reference:
-# items GET -> reads from items table, returns list[Item]
-# learners GET -> reads from learners table, returns list[Learner]
-# Query parameter: ?enrolled_after= filters learners by enrolled_at date
+
+@router.get("/", response_model=list[Learner])
+async def get_learners(
+    enrolled_after: datetime | None = None,
+    session: AsyncSession = Depends(get_session),
+):
+    """Get all learners sorted by the time of enrolling"""
+    return await read_learners(session, enrolled_after)
+
+Reference:
+items GET -> reads from items table, returns list[Item]
+learners GET -> reads from learners table, returns list[Learner]
+Query parameter: ?enrolled_after= filters learners by enrolled_at date
 
 # ===
 # PART B: POST endpoint
